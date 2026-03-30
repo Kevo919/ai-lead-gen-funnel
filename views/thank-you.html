@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PAGE_TITLE}}</title>
+  <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">Home<span>Pro</span> {{SERVICE_SHORT}}</div>
+    <div class="header-phone">
+      <a href="tel:{{PHONE}}">📞 {{PHONE}}</a>
+    </div>
+  </header>
+
+  <!-- Thank You Content -->
+  <div class="thank-you-wrapper">
+    <div class="thank-you-card">
+      <div class="checkmark">✓</div>
+      <h1>Thank You!</h1>
+      <p>Your free {{SERVICE_SHORT}} quote request has been received.</p>
+      <p>A local {{CITY_NAME}} specialist will contact you <strong>within 30 minutes</strong> during business hours.</p>
+
+      <a href="tel:{{PHONE}}" class="phone-link">Need faster help? Call {{PHONE}}</a>
+
+      <p style="margin-top:24px">
+        <a href="/{{SERVICE_SLUG}}/{{CITY_SLUG}}" style="color:#2563eb;font-weight:600">← Back to {{SERVICE_SHORT}} Services</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; {{YEAR}} HomePro {{SERVICE_SHORT}} — {{CITY_FULL}}. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

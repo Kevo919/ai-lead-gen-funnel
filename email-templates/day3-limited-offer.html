@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limited Time Offer</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f4f4f4; }
+    .container { max-width: 600px; margin: 20px auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .header { text-align: center; border-bottom: 3px solid #dc2626; padding-bottom: 20px; margin-bottom: 30px; }
+    .header h1 { color: #dc2626; margin: 0; font-size: 24px; }
+    .urgent-banner { background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); color: white; padding: 20px; text-align: center; border-radius: 5px; margin: 20px 0; }
+    .urgent-banner h2 { margin: 0 0 10px 0; font-size: 22px; }
+    .content { margin: 20px 0; }
+    .content p { margin: 15px 0; }
+    .offer-box { background-color: #fef2f2; border: 2px solid #dc2626; padding: 20px; border-radius: 5px; margin: 20px 0; }
+    .offer-box h3 { color: #dc2626; margin: 0 0 15px 0; }
+    .offer-box ul { margin: 10px 0; padding-left: 20px; }
+    .cta-button { display: inline-block; background-color: #dc2626; color: #ffffff; padding: 15px 40px; text-decoration: none; border-radius: 5px; margin: 20px 0; font-weight: bold; font-size: 16px; }
+    .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb; font-size: 12px; color: #6b7280; text-align: center; }
+    .unsubscribe { font-size: 11px; color: #9ca3af; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Special Offer Inside, {{NAME}}</h1>
+    </div>
+
+    <div class="content">
+      <div class="urgent-banner">
+        <h2>🔥 Limited Time: Save Up to $500</h2>
+        <p style="margin: 0; font-size: 14px;">Exclusive offer for {{CITY}} homeowners</p>
+      </div>
+
+      <p>Hi {{NAME}},</p>
+
+      <p>We noticed you requested a quote for <strong>{{SERVICE}}</strong> a few days ago. We want to make sure you don't miss out on our current promotion!</p>
+
+      <div class="offer-box">
+        <h3>Your Exclusive Savings:</h3>
+        <ul>
+          <li><strong>$500 OFF</strong> complete installations</li>
+          <li><strong>$150 OFF</strong> repair services</li>
+          <li><strong>FREE</strong> inspection with any service call</li>
+        </ul>
+        <p style="margin: 15px 0 0 0;"><strong>Offer expires in 5 days</strong> - don't wait!</p>
+      </div>
+
+      <p>This is one of our best promotions of the year, and it's only available for a limited time.</p>
+
+      <p><strong>Ready to save?</strong> Reply to this email or call us directly at <strong>{{PHONE}}</strong> and mention this offer to claim your discount.</p>
+
+      <p>We look forward to helping you with your {{SERVICE_SHORT}} needs!</p>
+
+      <p>Best regards,<br><strong>Your Local Home Services Team</strong></p>
+    </div>
+
+    <div class="footer">
+      <p>You're receiving this because you requested a quote at {{CITY}}.</p>
+      <div class="unsubscribe">
+        <a href="{{UNSUBSCRIBE_URL}}" style="color: #9ca3af;">Unsubscribe from future emails</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

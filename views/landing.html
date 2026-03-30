@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="Get a free {{SERVICE_SHORT}} quote in {{CITY_FULL}}. Licensed, insured technicians. Same-day service available. Call {{PHONE}} or fill out our quick form.">
+  <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+<body>
+
+  <!-- Urgency Top Bar -->
+  <div class="top-bar">
+    🔥 <span class="highlight">Limited Time:</span> Free Estimates for {{CITY_NAME}} Homeowners — Call <a href="tel:{{PHONE}}" style="color:#facc15">{{PHONE}}</a>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">Home<span>Pro</span> {{SERVICE_SHORT}}</div>
+    <div class="header-phone">
+      <a href="tel:{{PHONE}}">📞 {{PHONE}}</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>{{HERO_HEADLINE}}</h1>
+    <p>{{HERO_SUBLINE}}</p>
+    <a href="#quote-form" class="hero-cta">Get My FREE Quote →</a>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-item">
+      <span class="badge">✓</span> Licensed & Insured
+    </div>
+    <div class="trust-item">
+      <span class="badge">✓</span> Free Estimates
+    </div>
+    <div class="trust-item">
+      <span class="badge">✓</span> A+ BBB Rating
+    </div>
+    <div class="trust-item">
+      <span class="badge">✓</span> Satisfaction Guaranteed
+    </div>
+  </div>
+
+  <!-- Benefits -->
+  <section class="benefits">
+    <h2>Why {{CITY_NAME}} Homeowners Choose Us</h2>
+    <div class="benefits-grid">
+      {{BENEFITS_HTML}}
+    </div>
+  </section>
+
+  <!-- Lead Capture Form -->
+  <section class="form-section" id="quote-form">
+    <div class="form-container">
+      <h2>Get Your FREE {{SERVICE_SHORT}} Quote</h2>
+      <p class="form-sub">No obligation. A local specialist will call you within 30 minutes.</p>
+
+      <div class="form-error" id="formError"></div>
+
+      <form id="leadForm" data-service="{{SERVICE_SLUG}}" data-city="{{CITY_SLUG}}">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="John Smith" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@email.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="serviceType">Service Needed</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="">Select a service...</option>
+              {{SERVICE_OPTIONS}}
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="zipCode">ZIP Code</label>
+            <input type="text" id="zipCode" name="zipCode" placeholder="85001" maxlength="10" required>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Get My Free Quote Now</button>
+        <p class="form-footer">🔒 Your information is secure and will never be shared.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our {{CITY_NAME}} Customers Say</h2>
+    <div class="testimonials-grid">
+      {{TESTIMONIALS_HTML}}
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="service-areas">
+    <h2>Serving the Greater {{CITY_NAME}} Area</h2>
+    <ul class="area-list">
+      {{AREA_LIST}}
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; {{YEAR}} HomePro {{SERVICE_SHORT}} — {{CITY_FULL}}. All rights reserved.</p>
+    <p style="margin-top:8px">
+      <a href="tel:{{PHONE}}">{{PHONE}}</a> &middot; Licensed & Insured &middot; Serving {{CITY_NAME}} & Surrounding Areas
+    </p>
+  </footer>
+
+  <script src="/public/js/form.js"></script>
+</body>
+</html>
